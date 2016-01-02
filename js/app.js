@@ -140,6 +140,7 @@ var _quake = (function(){
 				method.map.clear_all();
 				method.map.add_points(_data_list);
 			}
+			jQuery('.filter-control').removeClass('filterWrapperActive');
 		},
 		map: {
 			start_map: function(){
