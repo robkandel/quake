@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>Is the ground shaking?</title>
+	<meta name="referrer" content="always">
+	<meta name="creator" content="Rob Kandel"> 	
+	<meta property="og:type" content="website" />
+    <meta property="og:title" content="Is the ground shaking?" />
+    <meta property="og:url" content="http://robkandel.github.io/quake/" />
+    <meta property="og:image" content="http://robkandel.github.io/quake/images/fb1.jpg" />
+    <meta property="og:description" content="Did you just feel the ground shake? Check out the most recent earthquakes in the US" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#006697">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#006697">
+	<meta name="apple-mobile-web-app-title" content="Is the ground shaking?">
+	<meta name="application-name" content="Is the ground shaking?">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.css" />
+	<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/styles.css">
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<!--[if lt IE 9]> 
+	<script>
+		var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+			"figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+		    "progress,section,time,video").split(',');
+		for (var i = 0; i < e.length; i++) {
+			document.createElement(e[i]);
+		}
+	</script>
+	<script type="text/javascript" src="js/respond.js"></script>
+	<![endif]-->
+  	<script src="http://cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="js/app.js"></script>
+ </head>
+ <body class="absoluteFull">
+ <div class="siteWrapper absoluteFull">
+	<header>
+		<hgroup class="mainNavigation">
+			<div class="logo">
+				<div class="logoText">
+					<span><img src="css/images/icon_white.svg"/> Is the ground shaking?</span>
+				</div>
+				<div class="socialWrapper">
+					<span><a href="https://www.facebook.com/sharer/sharer.php?u=http://robkandel.github.io/quake/"><i class="fa fa-facebook-official"></i></a></span>
+					<span><a href="https://twitter.com/intent/tweet?original_referer=http://robkandel.github.io/quake/&amp;text=Is+the+ground+shaking?&amp;url=http://robkandel.github.io/quake/"><i class="fa fa-twitter-square"></i></a></span>
+				</div>
+			</div>
+			<div class="clearAll"></div>
+		</hgroup>
+	</header>
+	<section class="layout absoluteFull">
+		<div class="mapHolder absoluteFull">
+			<div class="theMap" id="the_map"></div>
+		</div>
+		<div class="preloaderWrapper absoluteFull">
+		  	<div class="preloaderSpinnerWrapper">
+		  		<div class="preloaderSpinner"></div>
+		  		<div class="preloaderSpinnerText">
+		  			Loading data...
+		  		</div>
+		  	</div>
+		</div>
+	</section>
+	<footer class="footerWrapper">
+  		<div class="footer">
+  			Source: <a href="http://earthquake.usgs.gov/" target="_blank">USGS</a> | <span><a href="https://github.com/robkandel/quake" target="_blank"><i class="fa fa-github-square"></i> Created by: Rob Kandel</a></span>
+  		</div>
+  	</footer>
+</div>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			_quake.init();
+		});
+	</script>
+	<script>
+
+	</script>
+ </body>
+</html>
