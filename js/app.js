@@ -231,6 +231,7 @@ var _quake = (function(){
 			by_time: function(){
 				_data_list = [];
 				_locations = [];
+				jQuery('.preloaderWrapper').show();
 				jQuery.ajax({
 					url: 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_'+_time+'.geojson',
 					dataType: 'json',
@@ -238,7 +239,7 @@ var _quake = (function(){
 						method.parse_data.parse_data(d);
 					},
 					error: function(){
-						console.log('error')
+						alert('Something went wrong, please try again')
 					}
 				})
 			}
