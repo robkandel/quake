@@ -34,8 +34,8 @@ var _quake = (function(){
 			var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i"), _url = window.location.href, _new_url;
   			var separator = _url.indexOf('?') !== -1 ? "&" : "?";
   			_new_url = (_url.match(re)) ? _url.replace(re, '$1' + key + "=" + value + '$2') : _url + separator + key + "=" + value;
-  			if (history.pushState) {
-    			window.history.pushState({path:_new_url},'',_new_url);
+  			if (history.replaceState {
+    			window.history.replaceState({path:_new_url},'',_new_url);
 			}
 		},
 		pick_location: function(){
