@@ -187,13 +187,12 @@ var _quake = (function(){
                 _marker_list = [];
 				var _fullBounds = new L.LatLngBounds();
 				for (i in list) {
-					var _color = method.parse_data.pick_color(list[i].magnitude)
 					var _marker = L.circleMarker(new L.LatLng(list[i].lat, list[i].lng), {
 					    color: '#444',
 					    opacity: 0.2,
 					    weight: 1,
-					    fillColor: _color,
-					    fillOpacity: 0.7,
+					    fillColor: parseFloat(list[i].magnitude)/10,
+					    fillOpacity: method.parse_data.pick_(list[i].magnitude),
 					    className: list[i].magnitude.toString()
 					});
                     if ((method.parse_data.in_magnitude(list[i].magnitude) || _magnitude == 'all') && (method.parse_data.in_location(list[i].state) || _places == 'all')) {
