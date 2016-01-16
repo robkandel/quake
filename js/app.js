@@ -34,7 +34,7 @@ var _quake = (function(){
 			var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i"), _url = window.location.href, _new_url;
   			var separator = _url.indexOf('?') !== -1 ? "&" : "?";
   			_new_url = (_url.match(re)) ? _url.replace(re, '$1' + key + "=" + value + '$2') : _url + separator + key + "=" + value;
-  			if (history.replaceState {
+  			if (history.replaceState) {
     			window.history.replaceState({path:_new_url},'',_new_url);
 			}
 		},
@@ -191,8 +191,8 @@ var _quake = (function(){
 					    color: '#444',
 					    opacity: 0.2,
 					    weight: 1,
-					    fillColor: parseFloat(list[i].magnitude)/10,
-					    fillOpacity: method.parse_data.pick_(list[i].magnitude),
+					    fillColor: method.parse_data.pick_color(list[i].magnitude),
+					    fillOpacity: (parseFloat(list[i].magnitude) / 10),
 					    className: list[i].magnitude.toString()
 					});
                     if ((method.parse_data.in_magnitude(list[i].magnitude) || _magnitude == 'all') && (method.parse_data.in_location(list[i].state) || _places == 'all')) {
