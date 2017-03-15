@@ -232,7 +232,7 @@ var _quake = (function(){
 				_locations = [];
 				jQuery('.preloaderWrapper').show();
 				jQuery.ajax({
-					url: 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_'+_time+'.geojson',
+					url: 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_'+_time+'.geojson',
 					dataType: 'json',
 					success: function(d){
 						method.parse_data.parse_data(d);
